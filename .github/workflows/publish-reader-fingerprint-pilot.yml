@@ -1,0 +1,33 @@
+name: Publish reader fingerprint pilot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-thucydides-fingerprints:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact source hashing tests
+        run: |
+          python -m unittest discover -s tools -p test_reader_packet.py -v
+          python -m unittest discover -s tools -p test_reader_fingerprint.py -v
+      - name: Build one v47 fingerprint packet
+        run: python tools/build_reader_fingerprint.py --book-id 152 --page 38
+      - name: Commit just the fingerprint JSON to main
+        run: |
+          git add reader-fingerprints-v1/books/152/1.json
+          if git diff --cached --quiet; then
+            echo "Fingerprint pilot is already up to date"
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Publish Thucydides reader fingerprint pilot"
+          git push origin HEAD:main
