@@ -1,0 +1,24 @@
+name: Validate reader packet builder
+
+on:
+  pull_request:
+    paths:
+      - 'tools/build_reader_packet.py'
+      - 'tools/test_reader_packet.py'
+      - '.github/workflows/test-reader-packet.yml'
+  push:
+    paths:
+      - 'tools/build_reader_packet.py'
+      - 'tools/test_reader_packet.py'
+      - '.github/workflows/test-reader-packet.yml'
+
+jobs:
+  reader-packets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check deterministic pilot packet exporter
+        run: python -m unittest discover -s tools -p test_reader_packet.py -v
