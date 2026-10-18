@@ -1,0 +1,31 @@
+name: Publish reader pilot packet
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-thucydides-pilot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify packet source integrity tests
+        run: python -m unittest discover -s tools -p test_reader_packet.py -v
+      - name: Build one 32-page pilot packet from v47
+        run: python tools/build_reader_packet.py --book-id 152 --page 38
+      - name: Commit generated packet to main only if changed
+        run: |
+          git add reader-packets-v1/books/152/1.json
+          if git diff --cached --quiet; then
+            echo "Pilot packet is already up to date."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Publish v1 Thucydides reader pilot packet"
+          git push origin HEAD:main
