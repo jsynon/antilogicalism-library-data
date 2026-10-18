@@ -9,6 +9,8 @@ from build_reader_fingerprint import build_fingerprint,write_fingerprint
 BOOK=152
 
 class FingerprintTests(unittest.TestCase):
+    save = ReaderPacketTests.save
+
     def setUp(self):
         # Reuse the exact synthetic v47 book fixture used by the packet builder.
         ReaderPacketTests.setUp(self)
