@@ -1,0 +1,34 @@
+name: Publish v1.10.0 interdisciplinary reader fingerprints
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fingerprint-collection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate fingerprint generation
+        run: |
+          python -m unittest discover -s tools -p 'test_reader_packet.py' -v
+          python -m unittest discover -s tools -p 'test_reader_fingerprint.py' -v
+          python -m unittest discover -s tools -p 'test_reader_collection.py' -v
+      - name: Build full-book fingerprints for four disciplines
+        run: python tools/build_reader_collection.py --books 7 114 152 529
+      - name: Publish fingerprints and coverage index
+        run: |
+          git add reader-fingerprints-v1/books reader-fingerprints-v1/coverage-v1.json
+          if git diff --cached --quiet; then
+            echo "Fingerprint collection is already up to date"
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Publish v1.10 full-book fingerprints"
+          git push origin HEAD:main
