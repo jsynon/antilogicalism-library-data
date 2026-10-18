@@ -21,3 +21,5 @@ python -m unittest discover -s tools -p test_reader_packet.py -v
 ```
 
 **Do not generate all 280,699 indexed pages yet.** First benchmark this one 32-page file against the existing trusted-source Worker probe in the separate `book-chatbot` repository. Only if the new method stays comfortably within Workers Free's actual CPU allowance should we plan library-wide packet generation. The number and total size of files also need to be checked against GitHub Pages publishing limits. Citation source ownership verification happens in the offline generator; the Worker validates the packet's expected schema and page IDs but **does not provide cryptographic immutability or claim-level fact checking**.
+
+The first reader packet pilot was generated successfully from the v47 library.
