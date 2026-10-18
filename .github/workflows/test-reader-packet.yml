@@ -5,11 +5,15 @@ on:
     paths:
       - 'tools/build_reader_packet.py'
       - 'tools/test_reader_packet.py'
+      - 'tools/build_reader_fingerprint.py'
+      - 'tools/test_reader_fingerprint.py'
       - '.github/workflows/test-reader-packet.yml'
   push:
     paths:
       - 'tools/build_reader_packet.py'
       - 'tools/test_reader_packet.py'
+      - 'tools/build_reader_fingerprint.py'
+      - 'tools/test_reader_fingerprint.py'
       - '.github/workflows/test-reader-packet.yml'
 
 jobs:
@@ -20,5 +24,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check deterministic pilot packet exporter
-        run: python -m unittest discover -s tools -p test_reader_packet.py -v
+      - name: Check deterministic packet and fingerprint exporters
+        run: |
+          python -m unittest discover -s tools -p test_reader_packet.py -v
+          python -m unittest discover -s tools -p test_reader_fingerprint.py -v
