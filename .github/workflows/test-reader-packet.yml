@@ -7,6 +7,8 @@ on:
       - 'tools/test_reader_packet.py'
       - 'tools/build_reader_fingerprint.py'
       - 'tools/test_reader_fingerprint.py'
+      - 'tools/build_reader_collection.py'
+      - 'tools/test_reader_collection.py'
       - '.github/workflows/test-reader-packet.yml'
   push:
     paths:
@@ -14,6 +16,8 @@ on:
       - 'tools/test_reader_packet.py'
       - 'tools/build_reader_fingerprint.py'
       - 'tools/test_reader_fingerprint.py'
+      - 'tools/build_reader_collection.py'
+      - 'tools/test_reader_collection.py'
       - '.github/workflows/test-reader-packet.yml'
 
 jobs:
@@ -28,3 +32,4 @@ jobs:
         run: |
           python -m unittest discover -s tools -p test_reader_packet.py -v
           python -m unittest discover -s tools -p test_reader_fingerprint.py -v
+          python -m unittest discover -s tools -p test_reader_collection.py -v
