@@ -678,7 +678,441 @@
     },
     {
       "bookId": "32",
-      "title": "Philosophy of Mind (Part Three of the Encyclopaedia of the Philosophical Sciences) — G.…3381 tokens truncated…s"
+      "title": "Philosophy of Mind (Part Three of the Encyclopaedia of the Philosophical Sciences) — G. W. F. Hegel",
+      "subjects": [
+        "Philosophy & Logic",
+        "Psychology & Psychoanalysis",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "27",
+      "title": "Discourses — Epictetus",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "228",
+      "title": "The Assayer — Galileo Galilei",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "596",
+      "title": "The Rise and Fall of the Third Reich: A History of Nazi Germany — William L. Shirer",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "638",
+      "title": "The New Oxford Annotated Bible, Fully Revised Fifth Edition — edited by Michael D. Coogan",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "577",
+      "title": "Eros and Civilization: A Philosophical Inquiry into Freud — Herbert Marcuse",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "606",
+      "title": "The Denial of Death — Ernest Becker",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "74",
+      "title": "The Republic — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "12",
+      "title": "Politics — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "272",
+      "title": "The Logic of Scientific Discovery — Karl Popper",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "275",
+      "title": "A Short History of the World — H. G. Wells",
+      "subjects": [
+        "History & Biography",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "560",
+      "title": "English Poetry, Vol. III: From Tennyson to Whitman (Harvard Classics, Vol. 42) — Various Poets",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "304",
+      "title": "Ecclesiastical History — Eusebius of Caesarea",
+      "subjects": [
+        "Religion & Sacred Texts",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "622",
+      "title": "The Jefferson Bible — Thomas Jefferson",
+      "subjects": [
+        "Religion & Sacred Texts",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "407",
+      "title": "D'Alembert's Dream — Denis Diderot",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "79",
+      "title": "Timaeus — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "29",
+      "title": "Letter to Menoeceus — Epicurus",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "157",
+      "title": "An Introduction to Metaphysics — Henri Bergson",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "398",
+      "title": "Vestiges of the Natural History of Creation — Robert Chambers",
+      "subjects": [
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "273",
+      "title": "No Exit and Three Other Plays — Jean-Paul Sartre",
+      "subjects": [
+        "Philosophy & Logic",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "563",
+      "title": "Sacred Writings, Vol. II: Christian, Buddhist, Hindu, and Mohammedan (Harvard Classics, Vol. 45) — Various Authors",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "161",
+      "title": "Writings of Leon Trotsky (1932) — Leon Trotsky",
+      "subjects": [
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "206",
+      "title": "Religions, Values, and Peak Experiences — Abraham H. Maslow",
+      "subjects": [
+        "Religion & Sacred Texts",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "540",
+      "title": "The Harvard Classics, Volume 22: The Odyssey — Homer",
+      "subjects": [
+        "Ancient Philosophy",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "10",
+      "title": "Physics — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "629",
+      "title": "The Natural History of Pliny, Volume IV — Pliny the Elder",
+      "subjects": [
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "649",
+      "title": "A Theology of Liberation: History, Politics, and Salvation — Gustavo Gutiérrez",
+      "subjects": [
+        "Philosophy & Logic",
+        "Religion & Sacred Texts",
+        "Politics & Society",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "153",
+      "title": "The Iliad — Homer",
+      "subjects": [
+        "Ancient Philosophy",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "278",
+      "title": "Against Heresies, Book II — Irenaeus",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "338",
+      "title": "The Open Society and Its Enemies, Volume I — Karl Popper",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "308",
+      "title": "The Fear of Freedom — Erich Fromm",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "236",
+      "title": "The Myth of Sisyphus and Other Essays — Albert Camus",
+      "subjects": [
+        "Philosophy & Logic",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "598",
+      "title": "Essays on the Theory of Numbers — Richard Dedekind",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "101",
+      "title": "Brave New World — Aldous Huxley",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "22",
+      "title": "The Dhammapada",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "569",
+      "title": "One-Dimensional Man: Studies in the Ideology of Advanced Industrial Society — Herbert Marcuse",
+      "subjects": [
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "201",
+      "title": "The Principles of Psychology, Volume II — William James",
+      "subjects": [
+        "Philosophy & Logic",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "18",
+      "title": "Meditations — Marcus Aurelius",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "300",
+      "title": "The Courage to Be — Paul Tillich",
+      "subjects": [
+        "Philosophy & Logic",
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "319",
+      "title": "A History of the Warfare of Science with Theology in Christendom, Volume II — Andrew Dickson White",
+      "subjects": [
+        "Religion & Sacred Texts",
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "318",
+      "title": "A History of the Warfare of Science with Theology in Christendom, Volume I — Andrew Dickson White",
+      "subjects": [
+        "Religion & Sacred Texts",
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "294",
+      "title": "The Catcher in the Rye — J. D. Salinger",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "624",
+      "title": "The Existence of God — Richard Swinburne",
+      "subjects": [
+        "Philosophy & Logic",
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "637",
+      "title": "A Theologico-Political Treatise — Benedict de Spinoza",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "408",
+      "title": "The Divided Self: An Existential Study in Sanity and Madness — R. D. Laing",
+      "subjects": [
+        "Politics & Society",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "15",
+      "title": "Rhetoric — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "618",
+      "title": "A History of Philosophy, Volume VIII: Bentham to Russell — Frederick Copleston",
+      "subjects": [
+        "Philosophy & Logic",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "41",
+      "title": "Fundamental Principles of the Metaphysics of Morals — Immanuel Kant",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "595",
+      "title": "The Rise and Fall of the Great Powers: Economic Change and Military Conflict from 1500 to 2000 — Paul Kennedy",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "646",
+      "title": "The New Oxford Annotated Bible, Fourth Edition, with the Apocrypha — edited by Michael D. Coogan",
+      "subjects": [
+        "Religion & Sacred Texts"
       ],
       "subjectBasis": "title/author catalog cues"
     },
