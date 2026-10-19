@@ -1,0 +1,816 @@
+{
+  "schema": "antilogicalism-reader-cohort-v1",
+  "libraryVersion": 47,
+  "purpose": "Staged cross-disciplinary Reader Companion cohort; the selected set is used only to gate verified source access during the 100–150-book alpha.",
+  "selectionMethod": "Stable seeded round-robin across catalog subject labels, with the current four pilot books and all fixed benchmark book IDs included first. Subject labels are catalog cues, not expert classifications.",
+  "bookIds": [
+    7,
+    529,
+    152,
+    114,
+    102,
+    149,
+    89,
+    54,
+    144,
+    239,
+    140,
+    192,
+    253,
+    436,
+    211,
+    353,
+    473,
+    245,
+    38,
+    188,
+    129,
+    600,
+    136,
+    464,
+    494,
+    26,
+    640,
+    13,
+    262,
+    456,
+    605,
+    478,
+    650,
+    172,
+    75,
+    326,
+    202,
+    271,
+    123,
+    281,
+    457,
+    350,
+    73,
+    336,
+    309,
+    305,
+    609,
+    476,
+    619,
+    143,
+    70,
+    19,
+    615,
+    139,
+    479,
+    113,
+    588,
+    303,
+    67,
+    547,
+    115,
+    315,
+    16,
+    109,
+    32,
+    27,
+    228,
+    596,
+    638,
+    577,
+    606,
+    74,
+    12,
+    272,
+    275,
+    560,
+    304,
+    622,
+    407,
+    79,
+    29,
+    157,
+    398,
+    273,
+    563,
+    161,
+    206,
+    540,
+    10,
+    629,
+    649,
+    153,
+    278,
+    338,
+    308,
+    236,
+    598,
+    101,
+    22,
+    569,
+    201,
+    18,
+    300,
+    319,
+    318,
+    294,
+    624,
+    637,
+    408,
+    15,
+    618,
+    41,
+    595,
+    646,
+    258,
+    422,
+    64,
+    112,
+    631,
+    134,
+    92,
+    471,
+    424,
+    170,
+    6,
+    72,
+    604,
+    613
+  ],
+  "books": [
+    {
+      "bookId": "7",
+      "title": "Nicomachean Ethics — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "529",
+      "title": "The Harvard Classics, Volume 11: On the Origin of Species — Charles Darwin",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "152",
+      "title": "History of the Peloponnesian War — Thucydides",
+      "subjects": [
+        "Ancient Philosophy",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "114",
+      "title": "Crime and Punishment — Fyodor Dostoevsky",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "102",
+      "title": "A Brief History of Time — Stephen Hawking",
+      "subjects": [
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "149",
+      "title": "The Histories — Herodotus",
+      "subjects": [
+        "Ancient Philosophy",
+        "History & Biography",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "89",
+      "title": "1984 — George Orwell",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "54",
+      "title": "Thus Spake Zarathustra — Friedrich Nietzsche",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "144",
+      "title": "On the Genealogy of Morals — Friedrich Nietzsche",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "239",
+      "title": "The Portable Nietzsche — Friedrich Nietzsche (edited by Walter Kaufmann)",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "140",
+      "title": "Fear and Trembling — Søren Kierkegaard",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "192",
+      "title": "Philosophical Fragments — Søren Kierkegaard",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "253",
+      "title": "The Sickness Unto Death — Søren Kierkegaard",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "436",
+      "title": "Kierkegaard’s Attack Upon “Christendom,” 1854–1855 — Søren Kierkegaard",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "211",
+      "title": "The Science of Knowledge — Johann Gottlieb Fichte",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "353",
+      "title": "The Sound and the Fury — William Faulkner",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "473",
+      "title": "Sacred Books of the East, Volume 6 — Various authors (edited by F. Max Müller)",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "245",
+      "title": "The Social Contract — Jean-Jacques Rousseau",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "38",
+      "title": "The Varieties of Religious Experience — William James",
+      "subjects": [
+        "Philosophy & Logic",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "188",
+      "title": "The Oresteia — Aeschylus",
+      "subjects": [
+        "Ancient Philosophy",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "129",
+      "title": "Essays — Michel de Montaigne",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "600",
+      "title": "Collected Works, Volume II: Publications 1938–1974 — Kurt Gödel",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "136",
+      "title": "The History of the Decline and Fall of the Roman Empire, Volume IV — Edward Gibbon",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "464",
+      "title": "Tragic Sense of Life — Miguel de Unamuno",
+      "subjects": [
+        "Philosophy & Logic",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "494",
+      "title": "Sacred Books of the East, Volume 27 — Various authors (edited by F. Max Müller)",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "26",
+      "title": "Democracy and Education — John Dewey",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "640",
+      "title": "Do Androids Dream of Electric Sheep? — Philip K. Dick",
+      "subjects": [
+        "Psychology & Psychoanalysis",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "13",
+      "title": "Posterior Analytics — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "262",
+      "title": "What Is Metaphysics? — Martin Heidegger",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "456",
+      "title": "A Study of History: Abridgement of Volumes I–VI — Arnold J. Toynbee (abridged by D. C. Somervell)",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "605",
+      "title": "The Time Machine — H. G. Wells",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "478",
+      "title": "Sacred Books of the East, Volume 11 — Various authors (edited by F. Max Müller)",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "650",
+      "title": "Selections from the Prison Notebooks — Antonio Gramsci",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "172",
+      "title": "Man's Search for Meaning — Viktor E. Frankl",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "75",
+      "title": "Sophist — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "326",
+      "title": "Practical Philosophy — Immanuel Kant",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "202",
+      "title": "The Principles of Quantum Mechanics — P. A. M. Dirac",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "271",
+      "title": "A Little History of the World — E. H. Gombrich",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "123",
+      "title": "The Divine Comedy — Dante Alighieri",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "281",
+      "title": "Against Heresies, Book V — Irenaeus",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "457",
+      "title": "The Wretched of the Earth — Frantz Fanon",
+      "subjects": [
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "350",
+      "title": "The Sane Society — Erich Fromm",
+      "subjects": [
+        "Politics & Society",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "73",
+      "title": "Protagoras — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "336",
+      "title": "Of Grammatology — Jacques Derrida",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "309",
+      "title": "The Feynman Lectures on Physics — Richard P. Feynman",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "305",
+      "title": "The Education of Henry Adams — Henry Adams",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "609",
+      "title": "Fahrenheit 451 — Ray Bradbury",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "476",
+      "title": "Sacred Books of the East, Volume IX: The Qur'ân",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "619",
+      "title": "A History of Philosophy, Volume IX: From the French Revolution to Sartre, Camus, and Levi-Strauss — Frederick Copleston",
+      "subjects": [
+        "Philosophy & Logic",
+        "Politics & Society",
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "143",
+      "title": "Complete Works — Sigmund Freud",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "70",
+      "title": "Phaedo — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "19",
+      "title": "Three Dialogues Between Hylas and Philonous — George Berkeley",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "615",
+      "title": "A History of Philosophy, Volume V: The British Philosophers, From Hobbes to Hume — Frederick Copleston",
+      "subjects": [
+        "Philosophy & Logic",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "139",
+      "title": "Faust, Parts I and II — Johann Wolfgang von Goethe",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "479",
+      "title": "Sacred Books of the East, Volume 12 — Various authors (edited by F. Max Müller)",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "113",
+      "title": "On the Revolutions of the Heavenly Spheres — Nicolaus Copernicus",
+      "subjects": [
+        "Politics & Society",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "588",
+      "title": "God and Other Minds: A Study of the Rational Justification of Belief in God — Alvin Plantinga",
+      "subjects": [
+        "Philosophy & Logic",
+        "Religion & Sacred Texts",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "303",
+      "title": "Lives of the Eminent Philosophers — Diogenes Laertius",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "67",
+      "title": "Laws — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "547",
+      "title": "The Voyage of the Beagle (Harvard Classics, Vol. 29) — Charles Darwin",
+      "subjects": [
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "115",
+      "title": "The Decline of the West — Oswald Spengler",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "315",
+      "title": "Heart of Darkness — Joseph Conrad",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "16",
+      "title": "The City of God — Augustine of Hippo",
+      "subjects": [
+        "Philosophy & Logic",
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "109",
+      "title": "Anti-Oedipus: Capitalism and Schizophrenia — Gilles Deleuze and Félix Guattari",
+      "subjects": [
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "32",
+      "title": "Philosophy of Mind (Part Three of the Encyclopaedia of the Philosophical Sciences) — G.…3381 tokens truncated…s"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "258",
+      "title": "War and Peace — Leo Tolstoy",
+      "subjects": [
+        "Politics & Society",
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "422",
+      "title": "Principles of Behavior: An Introduction to Behavior Theory — Clark L. Hull",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "64",
+      "title": "Gorgias — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "112",
+      "title": "Contingency, Irony, and Solidarity — Richard Rorty",
+      "subjects": [
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "631",
+      "title": "The Natural History of Pliny, Volume VI — Pliny the Elder",
+      "subjects": [
+        "Science & Mathematics",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "134",
+      "title": "The History of the Decline and Fall of the Roman Empire, Volume II — Edward Gibbon",
+      "subjects": [
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "92",
+      "title": "Animal Farm — George Orwell",
+      "subjects": [
+        "Literature & Drama"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "471",
+      "title": "Sacred Books of the East, Volume 4 — Various authors (edited by F. Max Müller)",
+      "subjects": [
+        "Religion & Sacred Texts"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "424",
+      "title": "Social Ecology and Communalism — Murray Bookchin",
+      "subjects": [
+        "Politics & Society"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "170",
+      "title": "Man and His Symbols — Carl Gustav Jung (editor)",
+      "subjects": [
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "6",
+      "title": "On Dreams — Aristotle",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic",
+        "Psychology & Psychoanalysis"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "72",
+      "title": "Philebus — Plato",
+      "subjects": [
+        "Ancient Philosophy",
+        "Philosophy & Logic"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "604",
+      "title": "Evolution and Ethics and Other Essays — Thomas H. Huxley",
+      "subjects": [
+        "Philosophy & Logic",
+        "Science & Mathematics"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    },
+    {
+      "bookId": "613",
+      "title": "A History of Philosophy, Volume III: Ockham to Suarez — Frederick Copleston",
+      "subjects": [
+        "Philosophy & Logic",
+        "History & Biography"
+      ],
+      "subjectBasis": "title/author catalog cues"
+    }
+  ],
+  "subjectCounts": {
+    "Science & Mathematics": 23,
+    "History & Biography": 23,
+    "Literature & Drama": 22,
+    "Religion & Sacred Texts": 22,
+    "Politics & Society": 19,
+    "Psychology & Psychoanalysis": 16,
+    "Ancient Philosophy": 23,
+    "Philosophy & Logic": 58
+  }
+}
