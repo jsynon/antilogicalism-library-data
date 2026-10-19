@@ -1,38 +1,29 @@
-# v1.11 — staged 128-book SHA-256 fingerprints (no duplicate full-text storage)
+# Full v47 public reader coverage (642 books)
 
-**Purpose:** The browser searches the existing v47 index. The Worker independently verifies the exact submitted page text against small owner-published SHA-256 records before using it to answer or construct a canonical citation. This staged alpha enables 128 varied books from v47, including the existing Aristotle, Darwin, Thucydides, and Dostoevsky tests. It stores hashes and page metadata only; it does not duplicate full-text OCR.
+**Purpose:** Expand the public Reading Companion from the 128-book staged cohort to every work in the current public digital-library catalog that has a canonical v47 PDF. The browser searches existing v47 OCR. The Worker independently verifies submitted page text against owner-published SHA-256 fingerprints before it uses the page or constructs a citation. These files contain hashes and page metadata only; they do not duplicate OCR.
 
-The existing `data-v47/` data and `reader-packets-v1/` pilot are not modified. No credentials, API keys, model outputs or additional copies of page text are stored here.
+## Scope
 
-## Data format
+The reproducible selection is [cohort-full-v47.json](cohort-full-v47.json): **642 books, 280,069 indexed pages, 9,149 fingerprint chunks**. It is derived from all public `digital-library/library-catalog.json` entries that have a valid canonical Google Drive PDF URL in the v47 manifest. The raw v47 manifest contains 644 books, while the public catalog contains 643 records. Book ID `1` is not in the public catalog. Public catalog book ID `628` has no canonical PDF URL and is excluded. Neither is included in Worker support or coverage.
 
-`reader-fingerprints-v1/books/{bookId}/{chunk}.json` contains records for one 32-page chunk. Each page record contains only `page`, `globalPageId`, `utf8Bytes`, and `sha256` (lowercase 64-character hex). At the packet level, the schema identifies v47, canonical title, and PDF Drive file ID from the original manifest.
+The measured packet output is approximately **38.5 MB**. The existing v47 full-text index and OCR remain unchanged. Forty-five pages exceed the current 14,000-byte submission limit; their fingerprints are included, but those pages cannot be submitted until page-size handling is expanded. This is a known small edge case for the whole-library milestone.
 
-The exporter computes SHA-256 over the **exact UTF-8 bytes** of `page.text` stored in canonical `data-v47/book-152.json.gz`. It does not trim, normalize whitespace, reflow OCR or replace punctuation; even changing a line break changes the digest. It uses the already-tested canonical v47 ownership check from `tools/build_reader_packet.py` and writes no full-page text.
+## Coordinated rollout
 
-## Publish the staged cohort
+1. Merge and deploy the Worker allowlist change for the same 642 IDs. The Worker remains disabled unless its existing public safety bindings and opt-in flags are configured.
+2. Merge this data workflow/cohort change.
+3. In **Actions → Publish full v47 public reader fingerprints → Run workflow**, manually dispatch the publishing workflow. It checks the full cohort against the canonical v47 manifest and publishes only the fingerprint packets and `coverage-v1.json`; it does not touch OCR data.
+4. Confirm the workflow commit and Pages availability, then run representative end-to-end questions across the newly covered disciplines, checking citations, source links, cross-turn context, and unsupported-question behavior.
 
-The reproducible selection is [cohort-128-v1.json](cohort-128-v1.json). It includes the four current pilot titles and all eight fixed cross-disciplinary benchmark titles; the rest are selected by a stable round-robin across catalog subject labels. Those labels are catalog cues rather than expert classifications.
+The workflow is manual so coverage is not published before the matching Worker allowlist is deployed. If the fingerprint files appear on `main` but their public Pages URLs return 404, GitHub Pages may not have rebuilt from the automatic `GITHUB_TOKEN` commit. Make a harmless direct commit through GitHub's website to trigger Pages; do not rerun the builder or alter v47 OCR.
 
-After the code and site changes are merged, go to **Actions → Publish v1.11 staged 128-book reader fingerprints → Run workflow**. The workflow checks all book shards against the canonical v47 manifest, enforces a 100–150 book cohort, writes the fingerprint packets and coverage manifest, and commits only those fingerprint files. It does not modify `data-v47/` or any existing OCR.
+## Data format and local validation
 
-**GitHub Pages caveat:** when the workflow commits using the automatic `GITHUB_TOKEN`, a branch-backed Pages site might not rebuild on that commit alone. If the file is visible in the main branch but its public `jsynon.github.io` link returns 404, make one harmless direct commit through GitHub's website (for example update this README), as was required for the plaintext pilot. Do NOT rerun the builder or delete v47.
-
-Expected public URL after publishing:
-
-`https://jsynon.github.io/antilogicalism-library-data/reader-fingerprints-v1/books/102/0.json`
-
-To validate the cohort locally without publishing it:
+Each `reader-fingerprints-v1/books/{bookId}/{chunk}.json` file covers one 32-PDF-page chunk. Page records contain `page`, `globalPageId`, `utf8Bytes`, and exact SHA-256 of the canonical OCR UTF-8 bytes. The exporter validates global page ownership, rejects duplicate physical pages, and writes output only after all selected shards pass validation.
 
 ```powershell
-python tools/build_reader_collection.py --books-file reader-fingerprints-v1/cohort-128-v1.json
-python -m unittest discover -s tools -p test_reader_collection.py -v
+python tools/build_reader_collection.py --books-file reader-fingerprints-v1/cohort-full-v47.json
+python -m unittest discover -s tools -p 'test_reader_*.py' -v
 ```
 
-## What it proves (and doesn't)
-
-The public Worker proof in the **separate** `jsynon/book-chatbot` repo will retrieve this small hash packet, independently calculate `crypto.subtle.digest('SHA-256', ...)` for the page text sent by the browser, and accept **only exact matches**. It will bind PDF page IDs/links from this trusted metadata rather than browser claims.
-
-A SHA-256 match strongly verifies the submitted bytes against data published by the repo owner. It does **not** certify OCR accuracy, the historical truth of the text, model reasoning correctness, or claim-level entailment. The current test doesn't enable public AI. No new paid services are involved.
-
-The 128-book local preflight covers 49,780 pages in 1,641 fingerprint chunks (about 6.83 MB of JSON). This is the intermediate alpha, not the entire 644-book library. Keep the existing v47 full-text index and OCR unchanged. After the expanded pilot is live, check valid and tampered page verification and review cross-discipline answer quality before scheduling full-library fingerprint publication.
+A hash match verifies that submitted bytes match owner-published source data. It does not certify OCR accuracy, historical truth, or claim-level entailment.
