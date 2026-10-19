@@ -106,8 +106,8 @@ def load_cohort(path: Path):
             not isinstance(data.get("bookIds"), list)):
         raise ValueError("Invalid v47 book cohort file")
     ids = data["bookIds"]
-    if not 100 <= len(ids) <= 150:
-        raise ValueError("Staged cohort must contain 100–150 books")
+    if not 100 <= len(ids) <= 644:
+        raise ValueError("Cohort must contain 100–644 books")
     if any(type(book_id) is not int or not 1 <= book_id <= 9999 for book_id in ids):
         raise ValueError("Cohort book IDs must be positive integers")
     if len(set(ids)) != len(ids):
@@ -123,7 +123,7 @@ def main():
     selection.add_argument("--books", nargs="+", type=int,
                            help="Explicit book IDs (defaults to the four-book pilot).")
     selection.add_argument("--books-file", type=Path,
-                           help="Versioned 100–150 book cohort JSON.")
+                           help="Versioned 100–644 book cohort JSON.")
     args = parser.parse_args()
     book_ids = load_cohort(args.books_file) if args.books_file else (args.books or list(PILOT_BOOKS))
     coverage = build_collection(args.root, args.output, book_ids)

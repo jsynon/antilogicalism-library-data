@@ -1,0 +1,48 @@
+name: Publish full v47 public reader fingerprints
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-reader-full-v47
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate fingerprint and collection builders
+        run: python -m unittest discover -s tools -p 'test_reader_*.py' -v
+      - name: Build complete public catalog coverage
+        run: >-
+          python tools/build_reader_collection.py
+          --books-file reader-fingerprints-v1/cohort-full-v47.json
+      - name: Confirm complete expected coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected=json.loads(Path('reader-fingerprints-v1/cohort-full-v47.json').read_text())['bookIds']
+          actual=json.loads(Path('reader-fingerprints-v1/coverage-v1.json').read_text())['books']
+          assert len(expected)==642, len(expected)
+          assert set(map(str, expected))==set(actual), (len(actual), 'coverage book ids differ')
+          assert '1' not in actual and '628' not in actual
+          print('Validated',len(actual),'books and',sum(x['pages'] for x in actual.values()),'pages')
+          PY
+      - name: Commit fingerprint records and coverage index
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reader-fingerprints-v1/books reader-fingerprints-v1/coverage-v1.json
+          git commit -m 'Publish full v47 public reader fingerprints'
+          git push origin HEAD:main
