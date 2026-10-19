@@ -44,5 +44,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reader-fingerprints-v1/books reader-fingerprints-v1/coverage-v1.json
+          if git diff --cached --quiet; then
+            echo 'Published fingerprint output is already current; nothing to commit.'
+            exit 0
+          fi
           git commit -m 'Publish full v47 public reader fingerprints'
           git push origin HEAD:main
