@@ -94,13 +94,39 @@ def build_collection(root: Path, output: Path, book_ids=PILOT_BOOKS):
     return coverage
 
 
+def load_cohort(path: Path):
+    """Read a versioned, reproducible book selection for staged publication."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        raise ValueError("Unable to read book cohort file") from error
+    if (not isinstance(data, dict) or
+            data.get("schema") != "antilogicalism-reader-cohort-v1" or
+            data.get("libraryVersion") != 47 or
+            not isinstance(data.get("bookIds"), list)):
+        raise ValueError("Invalid v47 book cohort file")
+    ids = data["bookIds"]
+    if not 100 <= len(ids) <= 150:
+        raise ValueError("Staged cohort must contain 100–150 books")
+    if any(type(book_id) is not int or not 1 <= book_id <= 9999 for book_id in ids):
+        raise ValueError("Cohort book IDs must be positive integers")
+    if len(set(ids)) != len(ids):
+        raise ValueError("Cohort book IDs must be unique")
+    return ids
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("data-v47"))
     parser.add_argument("--output", type=Path, default=Path("reader-fingerprints-v1"))
-    parser.add_argument("--books", nargs="+", type=int, default=list(PILOT_BOOKS))
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--books", nargs="+", type=int,
+                           help="Explicit book IDs (defaults to the four-book pilot).")
+    selection.add_argument("--books-file", type=Path,
+                           help="Versioned 100–150 book cohort JSON.")
     args = parser.parse_args()
-    coverage = build_collection(args.root, args.output, args.books)
+    book_ids = load_cohort(args.books_file) if args.books_file else (args.books or list(PILOT_BOOKS))
+    coverage = build_collection(args.root, args.output, book_ids)
     print("Built", len(coverage["books"]), "books /",
           sum(b["pages"] for b in coverage["books"].values()), "pages /",
           sum(b["chunks"] for b in coverage["books"].values()), "fingerprint chunks")

@@ -3,7 +3,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from build_reader_collection import build_collection
+from build_reader_collection import build_collection, load_cohort
 
 
 class CollectionTests(unittest.TestCase):
@@ -66,6 +66,31 @@ class CollectionTests(unittest.TestCase):
         self.save()
         with self.assertRaisesRegex(ValueError, "Duplicate"):
             build_collection(self.root, self.out, [7])
+
+    def test_cohort_loader_requires_a_unique_100_to_150_book_v47_selection(self):
+        path = self.out / "cohort.json"
+        ids = list(range(100, 228))
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({
+            "schema": "antilogicalism-reader-cohort-v1",
+            "libraryVersion": 47,
+            "bookIds": ids,
+        }), encoding="utf-8")
+        self.assertEqual(load_cohort(path), ids)
+
+        for bad_ids, message in [
+            (ids[:99], "100–150"),
+            (ids + list(range(228, 251)), "100–150"),
+            (ids[:-1] + [ids[0]], "unique"),
+            (ids[:-1] + ["not-a-book"], "positive integers"),
+        ]:
+            path.write_text(json.dumps({
+                "schema": "antilogicalism-reader-cohort-v1",
+                "libraryVersion": 47,
+                "bookIds": bad_ids,
+            }), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, message):
+                load_cohort(path)
 
 
 if __name__ == "__main__":
