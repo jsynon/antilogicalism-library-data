@@ -38,6 +38,7 @@ This repository is published using GitHub Pages from the `main` branch and repos
 - [Antilogicalism](https://jsynon.github.io/antilogicalism/) — Main website
 - [Digital Library Search](https://jsynon.github.io/antilogicalism/digital-library/) — Search interface
 - [Antilogicalism Website Repository](https://github.com/jsynon/antilogicalism) — Website source code
+- [Antilogicalism Reading Companion Repository](https://github.com/jsynon/book-chatbot) — Chatbot API and local workbench for asking questions about the library's books
 
 ---
 
