@@ -4,7 +4,7 @@ Search index data for the [Antilogicalism Digital Library](https://jsynon.github
 
 ## Current Dataset
 
-**Version 47 (v47)**
+**Version 48 (v48)**
 
 - **644 books**
 - **280,699 indexed PDF pages**
@@ -23,7 +23,7 @@ The original PDF documents remain on Google Drive. Search results allow readers 
 
 The current production dataset is stored in:
 
-`data-v47/`
+`data-v48/`
 
 Each dataset version is preserved independently to support testing, verification, and reliable updates.
 
