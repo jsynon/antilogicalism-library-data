@@ -4,12 +4,14 @@ Search index data for the [Antilogicalism Digital Library](https://jsynon.github
 
 ## Current Dataset
 
-**Version 48 (v48)**
+**Version 49 (v49)**
 
-- **644 books**
-- **280,699 indexed PDF pages**
+- **645 catalog titles**
+- **281,554 indexed PDF pages**
 - Full-text search across a collection of philosophical, literary, historical, religious, and other classic works.
 - Compressed search data loaded on demand by the browser.
+
+The Reading Companion uses the v3 reader-fingerprint coverage manifest to restrict its book selector to titles with verified source-page fingerprints. That manifest currently covers **644 titles**.
 
 ## About This Repository
 
@@ -23,9 +25,9 @@ The original PDF documents remain on Google Drive. Search results allow readers 
 
 The current production dataset is stored in:
 
-`data-v48/`
+`data-v49/`
 
-Each dataset version is preserved independently to support testing, verification, and reliable updates.
+Each dataset version is preserved independently to support testing, verification, and reliable updates. Earlier versions, including `data-v48/`, remain available.
 
 New versions should be published in separate versioned directories rather than overwriting an existing production dataset.
 
