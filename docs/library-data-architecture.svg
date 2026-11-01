@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1280" viewBox="0 0 1800 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Antilogicalism Library Data architecture and pipeline</title>
+  <desc id="desc">A map of the versioned library search data, per-book page text shards, and reader fingerprints published for the Antilogicalism website and Reading Companion, with original PDFs remaining on Google Drive.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L11 6 L1 11 Z" fill="#52718f"/></marker>
+    <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L11 6 L1 11 Z" fill="#168b89"/></marker>
+    <style>
+      text{font-family:Inter,Arial,sans-serif;fill:#172b43}
+      .title{font-size:42px;font-weight:750;letter-spacing:-.5px}
+      .subtitle{font-size:20px;fill:#53677c}
+      .section{font-size:15px;font-weight:750;letter-spacing:2px;fill:#65798d}
+      .cardTitle{font-size:22px;font-weight:750}
+      .tag{font-size:13px;font-weight:750;letter-spacing:1.4px}
+      .body{font-size:17px;fill:#41566d}
+      .small{font-size:14px;fill:#53677c}
+      .tiny{font-size:12px;fill:#60758a}
+      .stepNum{font-size:16px;font-weight:800;fill:white}
+      .stepTitle{font-size:17px;font-weight:750}
+      .stepBody{font-size:14px;fill:#52677e}
+      .rule{stroke:#dbe3eb;stroke-width:1.5}
+      .connector{fill:none;stroke:#52718f;stroke-width:3;marker-end:url(#arrow)}
+      .connectorTeal{fill:none;stroke:#168b89;stroke-width:3;marker-end:url(#arrowTeal)}
+    </style>
+  </defs>
+  <rect width="1800" height="1280" fill="#f5f7fa"/>
+  <circle cx="1685" cy="86" r="120" fill="#e9f1f5"/>
+  <circle cx="1665" cy="75" r="72" fill="#deeeee"/>
+  <text x="70" y="86" class="title">Antilogicalism Library Data</text>
+  <text x="72" y="125" class="subtitle">Versioned text and page verification files behind Library Search and the Reading Companion</text>
+  <rect x="70" y="158" width="1658" height="1" fill="#dbe3eb"/>
+
+  <text x="72" y="195" class="section">1 · WHAT THIS REPOSITORY PUBLISHES</text>
+  <g>
+    <rect x="70" y="220" width="520" height="210" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+    <rect x="70" y="220" width="520" height="9" rx="5" fill="#5864aa"/>
+    <text x="98" y="262" class="tag" fill="#5864aa">SEARCH INDEX · data-v49/</text>
+    <text x="98" y="300" class="cardTitle">Manifest &amp; term partitions</text>
+    <text x="98" y="337" class="body">Compressed metadata maps search terms</text>
+    <text x="98" y="364" class="body">to matching books and pages.</text>
+    <text x="98" y="405" class="small">The browser loads these files on demand.</text>
+
+    <rect x="640" y="220" width="520" height="210" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+    <rect x="640" y="220" width="520" height="9" rx="5" fill="#d49234"/>
+    <text x="668" y="262" class="tag" fill="#a36513">BOOK TEXT · book-{id}.json.gz</text>
+    <text x="668" y="300" class="cardTitle">Per-book page shards</text>
+    <text x="668" y="337" class="body">Compressed page text, page numbers,</text>
+    <text x="668" y="364" class="body">and IDs used to locate passages.</text>
+    <text x="668" y="405" class="small">Text is indexed from the source PDFs.</text>
+
+    <rect x="1210" y="220" width="520" height="210" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+    <rect x="1210" y="220" width="520" height="9" rx="5" fill="#168b89"/>
+    <text x="1238" y="262" class="tag" fill="#168b89">VERIFICATION · reader-fingerprints-v3/</text>
+    <text x="1238" y="300" class="cardTitle">Source-page fingerprints</text>
+    <text x="1238" y="337" class="body">SHA-256 hashes identify exact page text</text>
+    <text x="1238" y="364" class="body">for eligible Reading Companion books.</text>
+    <text x="1238" y="405" class="small">Coverage manifest currently lists 644 titles.</text>
+  </g>
+  <text x="72" y="466" class="small"><tspan font-weight="700" fill="#5864aa">Current release · v49:</tspan> 645 catalog titles · 281,554 indexed PDF pages · earlier dataset versions remain available.</text>
+
+  <rect x="70" y="494" width="1660" height="1.5" fill="#dbe3eb"/>
+  <text x="72" y="533" class="section">2 · HOW THE PROJECTS USE THESE FILES</text>
+
+  <rect x="70" y="560" width="1660" height="144" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+  <rect x="70" y="560" width="10" height="144" rx="5" fill="#d49234"/>
+  <text x="102" y="597" class="tag" fill="#a36513">THIS REPOSITORY · GITHUB PAGES</text>
+  <text x="102" y="635" class="cardTitle">Publishes static, versioned library data</text>
+  <text x="102" y="672" class="body">Search indexes, page shards, and fingerprint coverage are served as files; the original PDFs are stored separately.</text>
+
+  <rect x="70" y="760" width="500" height="175" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+  <rect x="70" y="760" width="500" height="9" rx="5" fill="#5864aa"/>
+  <text x="98" y="799" class="tag" fill="#5864aa">WEBSITE REPO · GITHUB PAGES</text>
+  <text x="98" y="837" class="cardTitle">Bookshelf &amp; Library Search</text>
+  <text x="98" y="873" class="body">Searches v49 and displays matching pages.</text>
+  <text x="98" y="902" class="small">Bookshelf links readers to original PDFs.</text>
+
+  <rect x="650" y="760" width="500" height="175" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+  <rect x="650" y="760" width="500" height="9" rx="5" fill="#168b89"/>
+  <text x="678" y="799" class="tag" fill="#168b89">CHATBOT REPO · CLOUDFLARE WORKER</text>
+  <text x="678" y="837" class="cardTitle">Reading Companion service</text>
+  <text x="678" y="873" class="body">Checks submitted page text against hashes.</text>
+  <text x="678" y="902" class="small">Returns answers with linked page citations.</text>
+
+  <rect x="1230" y="760" width="500" height="175" rx="18" fill="#ffffff" stroke="#ccd8e3" stroke-width="2"/>
+  <rect x="1230" y="760" width="500" height="9" rx="5" fill="#8b96a5"/>
+  <text x="1258" y="799" class="tag" fill="#647284">ORIGINAL SOURCES · GOOGLE DRIVE</text>
+  <text x="1258" y="837" class="cardTitle">The original book PDFs</text>
+  <text x="1258" y="873" class="body">Remain outside this data repository.</text>
+  <text x="1258" y="902" class="small">Readers can open the cited page in context.</text>
+
+  <path d="M310 704 L310 756" class="connectorTeal"/>
+  <text x="330" y="738" class="tiny">search data &amp; page text</text>
+  <path d="M900 704 L900 756" class="connectorTeal"/>
+  <text x="920" y="738" class="tiny">fingerprint files</text>
+  <path d="M650 852 L574 852" class="connector"/>
+  <text x="576" y="839" class="tiny">answers &amp; citations</text>
+
+  <rect x="70" y="974" width="1660" height="1.5" fill="#dbe3eb"/>
+  <text x="72" y="1013" class="section">3 · FROM SEARCH TO A VERIFIED CITATION</text>
+  <g>
+    <rect x="70" y="1040" width="382" height="132" rx="16" fill="#eef0fb" stroke="#c8ccef" stroke-width="2"/>
+    <circle cx="101" cy="1072" r="17" fill="#5864aa"/><text x="101" y="1078" text-anchor="middle" class="stepNum">1</text>
+    <text x="128" y="1078" class="stepTitle">Load the search index</text>
+    <text x="94" y="1117" class="stepBody">Read manifest and term partitions.</text>
+    <text x="94" y="1143" class="tiny">Files are fetched as the browser needs them.</text>
+
+    <path d="M452 1106 L480 1106" class="connector"/>
+
+    <rect x="484" y="1040" width="382" height="132" rx="16" fill="#fff5e5" stroke="#ecd5ad" stroke-width="2"/>
+    <circle cx="515" cy="1072" r="17" fill="#c78320"/><text x="515" y="1078" text-anchor="middle" class="stepNum">2</text>
+    <text x="542" y="1078" class="stepTitle">Find matching pages</text>
+    <text x="508" y="1117" class="stepBody">Use the index to locate passages.</text>
+    <text x="508" y="1143" class="tiny">Load the relevant book text shard.</text>
+
+    <path d="M866 1106 L894 1106" class="connector"/>
+
+    <rect x="898" y="1040" width="382" height="132" rx="16" fill="#e8f4f3" stroke="#b8dcd8" stroke-width="2"/>
+    <circle cx="929" cy="1072" r="17" fill="#168b89"/><text x="929" y="1078" text-anchor="middle" class="stepNum">3</text>
+    <text x="956" y="1078" class="stepTitle">Check source-page text</text>
+    <text x="922" y="1117" class="stepBody">Worker compares the exact text hash.</text>
+    <text x="922" y="1143" class="tiny">Fingerprint coverage determines eligibility.</text>
+
+    <path d="M1280 1106 L1308 1106" class="connector"/>
+
+    <rect x="1312" y="1040" width="418" height="132" rx="16" fill="#f0f2f5" stroke="#d0d7df" stroke-width="2"/>
+    <circle cx="1343" cy="1072" r="17" fill="#758396"/><text x="1343" y="1078" text-anchor="middle" class="stepNum">4</text>
+    <text x="1370" y="1078" class="stepTitle">Open the cited source</text>
+    <text x="1336" y="1117" class="stepBody">Follow the citation to the original PDF.</text>
+    <text x="1336" y="1143" class="tiny">Check the passage in its wider context.</text>
+  </g>
+  <text x="72" y="1214" class="small">Fingerprints verify page-text identity; they do not assess whether a passage supports an answer's claim.</text>
+  <text x="1728" y="1214" text-anchor="end" class="tiny">Based on the current default branch, reviewed November 1, 2026.</text>
+</svg>
