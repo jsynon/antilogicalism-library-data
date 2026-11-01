@@ -2,7 +2,7 @@
 
 Search index data for the [Antilogicalism Digital Library](https://jsynon.github.io/antilogicalism/digital-library/).
 
-![Antilogicalism Library Data architecture](docs/library-data-architecture.png)
+![Antilogicalism Library Data architecture](https://raw.githubusercontent.com/jsynon/antilogicalism-library-data/main/docs/library-data-architecture.png)
 
 ## Current Dataset
 
